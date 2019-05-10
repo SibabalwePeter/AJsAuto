@@ -1,0 +1,50 @@
+﻿/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000) [AppointmentId]
+      ,[Date]
+      ,[TimeIn]
+      ,[Duration]
+      ,[NumberOfItems]
+      ,[Items]
+      ,[EngineerId]
+      ,[AppointmentItemId]
+      ,[ClientId]
+  FROM [AJSAUTO].[dbo].[Appointments]
+
+
+
+  INSERT INTO Engineers (EngineerId, [Name], [Surname], [Email], [SkillLevel]) 
+VALUES ('6310c710-e5e0-47b3-aa70-436593e35043', 'Sindiso', 'Ross', '14p2848@gmail.com',1)
+
+INSERT INTO Engineers (EngineerId, [Name], [Surname], [Email], [SkillLevel]) 
+VALUES ('6310c720-e5e0-47b3-aa70-436593e35042', 'Sbusiso', 'Dam', 'speter@singular.co.za',1)
+
+INSERT INTO Engineers (EngineerId, [Name], [Surname], [Email], [SkillLevel]) 
+VALUES ('6310c730-e5e0-47b3-aa70-436593e35041', 'Mnoneleli', 'Fejeni', '14p2848@gmail.com',2)
+
+
+INSERT INTO [ServiceItems] ([ServiceItemId], [Name], [Duration], [SkillLevel]) 
+VALUES ('5dc30b3a-1795-49b1-8da8-3a955bb3e40f', 'Breaks fluid', '2019-11-30 12:12:12.1234567', 2)
+
+
+INSERT INTO [ServiceItems] ([ServiceItemId], [Name], [Duration], [SkillLevel]) 
+VALUES ('5dc30b3a-1795-49b1-8da8-3a955bb3e40e', 'Engine Oil', '2019-11-30 12:12:12.1234567', 1)
+
+
+INSERT INTO [Clients] ([ClientId], [Name], [Surname], [Email], [CellPhoneNumber], [Password]) VALUES ( '569aead3-4655-4c72-89cf-da38dbae5e9e', 'Sibabalwe', 'Peter', 'sibabalwepeter2848', '0719091530', 123);
+
+INSERT INTO AppointmentItems([AppointmentItemId], [ServiceItemId]) VALUES ( '3fa929b9-5d7a-4eaf-b0b9-df0a1be95dce', '5dc30b3a-1795-49b1-8da8-3a955bb3e40f');
+
+
+
+INSERT INTO [Appointments] ([AppointmentId], [Date], [Items], [TimeIn], [Duration], [NumberOfItems], [EngineerId], [AppointmentItemId], [ClientId])
+VALUES(
+'f9bc5c8a-a8af-4c17-9215-c411da377ddc', 
+'2019-04-29 13:40:12.1234567', 
+'Break Fuild',
+'2019-04-29 13:40:12.1234567', 
+'2019-04-29 13:50:12.1234567', 
+1, 
+'6310C720-E5E0-47B3-AA70-436593E35040',
+'3fa929b9-5d7a-4eaf-b0b9-df0a1be95dce', 
+'569aead1-4659-4c72-89cf-da38dbae5e9e'
+)
