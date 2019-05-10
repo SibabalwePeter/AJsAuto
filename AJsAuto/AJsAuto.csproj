@@ -28,10 +28,6 @@
     <TypeScriptCompile Include="..\..\..\AJ%2527s Auto - v2\AJsAuto\AJsAuto\clientapp\src\componets\Entities\Client\ClientList.tsx" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="clientapp\" />
-  </ItemGroup>
-
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">
