@@ -19,29 +19,13 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
-    <Compile Remove="ClientApp\**" />
     <Content Remove="$(SpaRoot)**" />
-    <Content Remove="ClientApp\**" />
-    <EmbeddedResource Remove="ClientApp\**" />
     <None Remove="$(SpaRoot)**" />
-    <None Remove="ClientApp\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\components\Entities\Schedule\AppointmentForm.tsx" />
-    <None Remove="ClientApp\src\components\Entities\Schedule\AppointmentList.tsx" />
-    <None Remove="ClientApp\src\context\IUser.tsx" />
-    <None Remove="ClientApp\src\context\User.tsx" />
-    <None Remove="ClientApp\src\main.tsx" />
-  </ItemGroup>
-
-  <ItemGroup>
     <TypeScriptCompile Include="..\..\..\AJ%2527s Auto - v2\AJsAuto\AJsAuto\clientapp\src\componets\Entities\Client\ClientList.tsx" />
-    <TypeScriptCompile Include="ClientApp\src\components\Entities\Schedule\AppointmentForm.tsx" />
-    <TypeScriptCompile Include="ClientApp\src\components\Entities\Schedule\AppointmentList.tsx" />
-    <TypeScriptCompile Include="ClientApp\src\context\IUser.tsx" />
-    <TypeScriptCompile Include="ClientApp\src\context\User.tsx" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
